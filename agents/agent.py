@@ -70,8 +70,7 @@ if __name__ == "__main__":
     python_input_prompt = dedent(
         """\
             Generate and save in current working directory, under a folder 'qrcodes' the following:\n\n
-            1 QR codes pointing to provided url: {qr_code_url_1} with the filename labelled as the website name of {qr_code_url_1} in png.; and 1 QR code pointing to the provided url: {qr_code_url_2} with the filename labelled as the website name of {qr_code_url_2} in png. You have 'qrcode' package installed and available for use. DO NOT GENERATE anything if the provided url is invalid.
-        """)
+            1 QR codes pointing to provided url: {qr_code_url_1} with the filename labelled as the website name of {qr_code_url_1} with any . replace by _ in png format.; and 1 QR code pointing to the provided url: {qr_code_url_2} with the filename labelled as the website name of {qr_code_url_2}  with any . replace by _ in png format. You have 'qrcode' package installed and available for use. DO NOT GENERATE IF THE PROVIDED URL IS INVALID.""")
     
     python_input_prompt_template = PromptTemplate.from_template(template=python_input_prompt)
     python_input_prompt_val = python_input_prompt_template.format_prompt(
@@ -95,7 +94,7 @@ if __name__ == "__main__":
         csv_file = os.environ.get("CSV_FILEPATH")
     )
 
-    csv_agent_executor = get_csv_agents_executor()
+    csv_agent_executor = get_csv_agent_executor()
 
     # CSV Executor invocation
     csv_agent_executor.invoke(
