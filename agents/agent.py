@@ -77,8 +77,7 @@ if __name__ == "__main__":
         qr_code_url_1 = os.environ.get("QR_CODE_URL_1"),
         qr_code_url_2 = os.environ.get("QR_CODE_URL_2")
     )
-    print(f"Simple invocation with prompt template formatted values:\n {python_input_prompt_val}")
-
+    
     python_agent_executor = get_python_agent_executor()
     python_agent_executor.invoke(
         input = {"input": python_input_prompt_val}
