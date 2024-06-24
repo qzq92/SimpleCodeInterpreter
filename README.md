@@ -1,6 +1,6 @@
 # SimpleCodeInterpreter
 
-Simple Code Interpreter tools built using Agents and LLM to containing the following which would be routed through the use of Router Agent:
+Simple Code interpreter built using LLM model, Agents with ReAct paradigm to decide on which defined tools is to be used based on input prompts set via the *ROUTER_AGENT_PROMPT*-prefixed environment variables in *.env* file.
 - QR code generation based on prompts containing url fed into Agents and LLM model
 - CSV analyzer based on sample *episode_info.csv* csv file representing "Seinfield" TV series, using langchain experimental agent involving *create_csv_agent*.
 
@@ -45,6 +45,7 @@ QR_CODE_URL_2 = "https://www.channelnewsasia.com"
 # Router prompts used by main.py script
 ROUTER_AGENT_PROMPT_1 = <YOUR 1st Example prompt for Router Agent>
 ROUTER_AGENT_PROMPT_2 = <YOUR 2nd Example prompt for Router Agent>
+
 # Optional if you are not using LangSmith for tracking llm utilisation related metrics
 LANGCHAIN_API_KEY=<YOUR API KEY>
 LANGCHAIN_TRACING_V2=true
@@ -89,4 +90,4 @@ python agents/agent.py
 
 ## Acknowledgement and Credits
 
-The codebase developed are in reference to *Section 6: Building a documentation assistant(Embeddings, VectorDBs, Retrieval, Memory)* of Udemy course titled "LangChain- Develop LLM powered applications with LangChain" available via https://www.udemy.com/course/langchain.
+The codebase developed are in reference to *Section 7: Building a slim ChatGPT Code-Interpreter(Advanced Agents, OpenAI Functions)* of Udemy course titled "LangChain- Develop LLM powered applications with LangChain" available via https://www.udemy.com/course/langchain.
