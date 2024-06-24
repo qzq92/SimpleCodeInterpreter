@@ -60,10 +60,10 @@ def main():
     )
 
     # Test prompt #1
-    prompt_1 = "Which season has the most episodes?"
+    prompt_1 = os.environ.get("ROUTER_AGENT_PROMPT_1")
     print(router_agent_executor.invoke({"input": prompt_1}))
 
-    prompt_2 = "Generate and save in current working directory, under a folder 'qrcodes' the following:\n\n 1 QR code pointing to provided url: https://www.techtarget.com/ and save as techtarget.png "
+    prompt_2 = os.environ.get("ROUTER_AGENT_PROMPT_2")
     
     print(router_agent_executor.invoke({"input": prompt_2}))
 
