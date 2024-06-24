@@ -30,7 +30,7 @@ Without setting such parameter, an exception would be raised as follows:
 
 ## Environment file to edit
 
-Please create an *.env* file with the following parameters. PYTHONPATH is required to be filled to ensure successful folder imports in project.
+Please create an *.env* file with the following parameters.
 
 ```
 OPENAI_API_KEY = <YOUR API KEY>
@@ -38,6 +38,13 @@ HUB_TEMPLATE = "langchain-ai/react-agent-template"
 OPENAI_MODEL = "gpt-4-turbo" # Or any other OPENAI offered models
 CSV_FILEPATH = "data/episode_info.csv"
 
+# QR Code urls of interest for prompt template (only if you are running *agent.py* script directly in *agents* directory)
+QR_CODE_URL_1 = "https://www.straitstimes.com"
+QR_CODE_URL_2 = "https://www.channelnewsasia.com"
+
+# Router prompts used by main.py script
+ROUTER_AGENT_PROMPT_1 = <YOUR 1st Example prompt for Router Agent>
+ROUTER_AGENT_PROMPT_2 = <YOUR 2nd Example prompt for Router Agent>
 # Optional if you are not using LangSmith for tracking llm utilisation related metrics
 LANGCHAIN_API_KEY=<YOUR API KEY>
 LANGCHAIN_TRACING_V2=true
@@ -57,9 +64,12 @@ You may include other csv file of interest in the *data/* subfolder of this repo
 conda env create -f environment.yml
 ```
 
-2. Run the main.py file with the following command
+2. Run the main.py or agents/agent.py file with either of the following commands directly from the repo main directory.
+
 ```
-python main.py
+python main.py;
+
+python agents/agent.py
 ```
 
 ## Errors encountered due to incompatibility of Python version with
