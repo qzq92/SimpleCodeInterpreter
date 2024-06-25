@@ -1,4 +1,4 @@
-# SimpleCodeInterpreter
+# Simple Code Interpreter
 
 Simple Code interpreter built using LLM model, Agents with ReAct paradigm to decide on which defined tools is to be used based on input prompts set via the *ROUTER_AGENT_PROMPT*-prefixed environment variables in *.env* file.
 - QR code generation based on prompts containing url fed into Agents and LLM model
