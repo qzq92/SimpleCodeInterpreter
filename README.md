@@ -7,11 +7,13 @@ Simple Code interpreter built using LLM model, Agents with ReAct paradigm to dec
 Note that the use of Agents do not necessary guarantee result accuracy as they are flaky in nature.
 Generated QR codes samples
 
-Channelnewsasia:
+**CNA Singapore:**
 
 ![Channelnewsasia](qrcodes/www_channelnewsasia_com.png)
 
-Straits Times Singapore:
+
+**Straits Times Singapore:**
+
 ![Straits Times Singapore](qrcodes/www_straitstimes_com.png)
 
 **Security Reminder: Please note that these generated codes are generated via the use of LLM prompts as part of exploration work. Care must be taken in validating the link when using any scanning device to scan the QR codes before accessing the links to reduce the risk of your device being compromised**
